@@ -1,0 +1,32 @@
+{
+  "name": "change-our-world-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "deploy": "gcloud builds submit --project=change-our-world-crypto --config=./cloudbuild.deploy.yml --substitutions=_NODE_ENV=staging .",
+    "deploy:production": "gcloud builds submit --project=change-our-world-crypto --config=./cloudbuild.deploy.yml --substitutions=_NODE_ENV=production ."
+  },
+  "dependencies": {
+    "@iconify/icons-mdi": "^1.1.15",
+    "@iconify/react": "^1.1.4",
+    "aos": "^2.3.4",
+    "next": "latest",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.3",
+    "@types/node": "15.0.0",
+    "@types/react": "17.0.4",
+    "@types/react-dom": "17.0.3",
+    "@types/styled-components": "5.1.9",
+    "babel-plugin-styled-components": "^1.12.0",
+    "typescript": "4.2.4"
+  }
+}
